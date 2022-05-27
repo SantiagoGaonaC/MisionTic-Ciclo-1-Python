@@ -1,0 +1,19 @@
+numeroPaquetes = input()
+costoTotal = 0
+n = 0
+for n in range(int(numeroPaquetes)): 
+    alto = float(input())
+    ancho = float(input())
+    profundo = float(input())
+    volumen = float(alto * ancho * profundo)
+    costo = float(volumen*12)
+    if (alto > 30):
+        costo += 2000
+ 
+    if (costo > 10000):
+        iva = float(costo* 0.19)
+        costo = (costo + iva)
+    costoTotal += costo
+    print(volumen)
+    print(costo)
+print(costoTotal)
